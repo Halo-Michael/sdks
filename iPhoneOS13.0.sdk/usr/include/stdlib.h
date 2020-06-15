@@ -178,18 +178,7 @@ unsigned long long
 	 strtoull(const char *__str, char **__endptr, int __base);
 #endif /* !__DARWIN_NO_LONG_LONG */
 
-#if TARGET_OS_EMBEDDED
-#define __swift_unavailable_on(osx_msg, ios_msg) __swift_unavailable(ios_msg)
-#else
-#define __swift_unavailable_on(osx_msg, ios_msg) __swift_unavailable(osx_msg)
-#endif
-
-__swift_unavailable_on("Use posix_spawn APIs or NSTask instead.", "Process spawning is unavailable")
-__API_AVAILABLE(macos(10.0)) __IOS_PROHIBITED
-__WATCHOS_PROHIBITED __TVOS_PROHIBITED
-int	 system(const char *) __DARWIN_ALIAS_C(system);
-
-#undef __swift_unavailable_on
+int	 system(const char *);
 
 size_t	 wcstombs(char * __restrict, const wchar_t * __restrict, size_t);
 int	 wctomb(char *, wchar_t);
