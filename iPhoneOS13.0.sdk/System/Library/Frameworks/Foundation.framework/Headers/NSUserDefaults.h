@@ -177,6 +177,8 @@ FOUNDATION_EXPORT NSString * const NSRegistrationDomain;
 // -objectIsForcedForKey: returns YES if the value for 'key' is provided by managed preferences (a configuration profile or mcx)
 - (BOOL)objectIsForcedForKey:(NSString *)key;
 
+- (id)_initWithSuiteName:(id)arg1 container:(id)arg2;
+
 // -objectIsForcedForKey:inDomain: returns YES if the value for 'key' is provided by managed preferences (a configuration profile or mcx) for the search list named by 'domain'
 - (BOOL)objectIsForcedForKey:(NSString *)key inDomain:(NSString *)domain;
 
