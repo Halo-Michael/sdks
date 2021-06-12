@@ -76,6 +76,7 @@
 #import <Foundation/NSStream.h>
 #import <Foundation/NSString.h>
 #import <Foundation/NSTextCheckingResult.h>
+#import <Foundation/NSTask.h>
 #import <Foundation/NSThread.h>
 #import <Foundation/NSTimeZone.h>
 #import <Foundation/NSTimer.h>
